@@ -17,6 +17,7 @@ my_dict['key3'] = 'value3'
 # 删除元素
 del my_dict['key2']
 value = my_dict.pop('key1')
+print(value)
 
 # 遍历字典
 for key in my_dict:
