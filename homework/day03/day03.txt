@@ -1,0 +1,80 @@
+2,
+# 2、查看/tmp/test文件的详细信息
+ls -l /tmp/test
+
+# 3、显示root家目录中所有后缀为.bak的文件的详细信息。
+ls -l /root/*.bak
+
+# 4、删除/tmp目录中所有以test开头的文件或目录。
+
+rm -r /tmp/test*
+
+# 5、查看/etc/passwd文件的后5行内容
+
+tail -n 5 /etc/passwd
+
+# 6、将/etc/passwd文件中前8行的内容复制到/root/pass.txt文件中。
+
+head -n 8 /etc/passwd > /root/pass.txt
+
+# 7、将/etc/fstab文件复制到/tmp目录中，并重命名为hi.txt。
+
+cp /etc/fstab /tmp/hi.txt
+
+# 8、以长格式列出/dev目录中以"d"、"f"开头并且文件名为3个字符的文件。
+
+ls -l /dev/[df]???
+
+# 9、在/tmp目录中创建一个名为ssh的软链接，指向源文件 /etc/ssh/sshd_config。
+
+ln -s /etc/ssh/sshd_config /tmp/ssh
+
+
+# 1、在Linux家目录中创建名为data的目录。
+
+mkdir ~/data
+
+# 2、强制删除/root/rc.d目录。
+
+rm -rf /root/rc.d
+
+# 3、将/etc目录中所有以".d"结尾的文件或目录复制到/tmp/d目录下。
+
+cp -r /etc/*.d /tmp/d
+
+# 4、在/etc/fstab文件中查找所有不是以"#"开头的行。
+
+grep -v '^#' /etc/fstab
+
+# 5、分页显示/etc/inittab文件中的内容。
+
+less /etc/inittab
+
+# 6、在/etc目录中查找最近1天之内被改动过的文件。
+
+find /etc -mtime -1
+
+# 7、查找/etc/passwd文件中所有以"nologin"结尾的行。
+
+grep 'nologin$' /etc/passwd
+
+# 8、查找/etc目录下小于1M且类型为普通文件的所有文件。
+
+find /etc -type f -size -1M
+
+# 9、统计/etc目录中后缀是"*.conf"的文件个数。
+
+find /etc -name "*.conf" | wc -l
+
+# 10、使用命令创建一个名为hadoop的用户并可以正常登陆。
+
+sudo useradd hadoop
+sudo passwd 123456
+
+
+# 11. 安装时间同步软件，保证当前服务器时间正确。
+
+sudo apt-get update
+sudo apt-get install ntp
+sudo service ntp start
+sudo systemctl enable ntp
