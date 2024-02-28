@@ -1,4 +1,4 @@
-'''
+"""
 1、创建一个文本文件test.txt 并添加任意多行内容，实现功能：读取test.txt并生成文件newtest.txt ，
 其中的内容与test.txt一致 ，但是在每行的首部添加当前行号，行尾添加当前行内容长度；
 2、a.声明一个人的类和一个狗的类:
@@ -15,57 +15,63 @@ b.创建人的对象小明，让他拥有一条狗大黄，然后让小明去遛
 方法:添加学生，删除学生，点名, 计算班上学生的平均年龄
 4、 定义一个函数，要用到异常捕获 输入年龄并且将年龄值转换为整数,范围是1-100，
 要使输入错误程序不能崩溃让其重新输入,直到输入无误为止
-'''
+"""
+
 import os
 
 now_directory = os.path.dirname(os.path.abspath(__file__))
 os.chdir(now_directory)
 
+
 def write_file(file_path, content):
     try:
-        with open(file_path, 'w', encoding='utf-8') as file:
+        with open(file_path, "w", encoding="utf-8") as file:
             file.write(content)
             print(f"Content successfully written to {file_path}")
     except Exception as e:
         print(f"An error occurred: {e}")
 
+
 def append_to_file(file_path, content):
     try:
-        with open(file_path, 'a', encoding='utf-8') as file:
+        with open(file_path, "a", encoding="utf-8") as file:
             file.write(content)
             print(f"Content successfully appended to {file_path}")
     except Exception as e:
         print(f"An error occurred: {e}")
 
+
 def change_file(file_path):
     try:
         # 读取 test.txt 中的内容，生成 newtest.txt
-        with open(file_path, 'r', encoding='utf-8') as file:
+        with open(file_path, "r", encoding="utf-8") as file:
             lines = file.readlines()
 
         # 处理每一行内容，添加行号和长度信息
         processed_lines = []
         for i, line in enumerate(lines, 1):
-            line = f'{i}: {line} Length: {len(line)}'
+            line = f"{i}: {line} Length: {len(line)}"
             processed_lines.append(line)
 
         # 将处理后的内容写入 newtest.txt
-        with open('new'+file_path, 'w', encoding='utf-8') as new_file:
-            new_file.write('\n'.join(processed_lines))
+        with open("new" + file_path, "w", encoding="utf-8") as new_file:
+            new_file.write("\n".join(processed_lines))
     except Exception as e:
         print(e)
 
+
 # 写入文件
 new_content = "This is a new content for the file.\n"
-write_file('test.txt', new_content)
-append_to_file('test.txt',new_content)
-append_to_file('test.txt',new_content)
-append_to_file('test.txt',new_content)
-append_to_file('test.txt',new_content)
-append_to_file('test.txt',new_content)
-change_file('test.txt')
+write_file("test.txt", new_content)
+append_to_file("test.txt", new_content)
+append_to_file("test.txt", new_content)
+append_to_file("test.txt", new_content)
+append_to_file("test.txt", new_content)
+append_to_file("test.txt", new_content)
+change_file("test.txt")
 ###############################################################################################
 # a. 声明一个人的类和一个狗的类
+
 
 class Dog:
     def __init__(self, name, color, age):
@@ -75,6 +81,7 @@ class Dog:
 
     def bark(self):
         return "Woof! Woof!"
+
 
 class Person:
     def __init__(self, name, age, dog=None):
@@ -92,14 +99,16 @@ class Person:
 # b. 创建人的对象小明，让他拥有一条狗大黄，然后让小明去遛大黄
 
 # 创建狗对象
-dog_yellow = Dog(name='大黄', color='yellow', age=3)
+dog_yellow = Dog(name="大黄", color="yellow", age=3)
 
 # 创建人对象
-xiaoming = Person(name='小明', age=25, dog=dog_yellow)
+xiaoming = Person(name="小明", age=25, dog=dog_yellow)
 
 # 让小明遛大黄
 result = xiaoming.walk_dog()
 print(result)
+
+
 #############################################################################################
 class Student:
     def __init__(self, name, age, student_id):
@@ -108,7 +117,7 @@ class Student:
         self.student_id = student_id
 
     def answer(self):
-        return self.name + ' 到'
+        return self.name + " 到"
 
     def print_info(self):
         print(f"姓名: {self.name}, 年龄: {self.age}, 学号: {self.student_id}")
@@ -154,6 +163,7 @@ classroom.roll_call()
 avg_age = classroom.average_age()
 print(f"班上学生的平均年龄: {avg_age}")
 
+
 ######################################################################################
 def get_valid_age():
     while True:
@@ -169,13 +179,3 @@ def get_valid_age():
 
 age = get_valid_age()
 print(f"有效年龄: {age}")
-
-
-
-
-
-
-
-
-
-   

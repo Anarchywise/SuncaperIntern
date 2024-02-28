@@ -340,18 +340,18 @@
 #
 # #将输入的数据转换成整型数据,然后再赋值给变量
 # age = int(input(' 年龄:')).
-names = ['海蜇王', '火影', '死神', '犬夜叉', '妖精的尾巴', '熊出没', '一人之下']
+names = ["海蜇王", "火影", "死神", "犬夜叉", "妖精的尾巴", "熊出没", "一人之下"]
 print(names[-2])
 import os
 
 # 获取path及filename
-path, filename = os.path.split('/home/patha/pathb/xxx.py')
+path, filename = os.path.split("/home/patha/pathb/xxx.py")
 
 print(path)
 print(filename)
 
 # 有的时候只想获取filename，可用"_"占位
 
-_, filename = os.path.split('/home/patha/pathb/xxx.py')
+_, filename = os.path.split("/home/patha/pathb/xxx.py")
 
 print(filename)

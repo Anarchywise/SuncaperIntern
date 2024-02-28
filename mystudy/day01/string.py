@@ -4,7 +4,7 @@ str2 = "World"
 result = str1 + ", " + str2  # 使用 + 运算符
 print(result)
 
-words = ["Hello", "World","!!"]
+words = ["Hello", "World", "!!"]
 result = ",.".join(words)  # 使用 join 方法
 print(result)
 
@@ -40,12 +40,12 @@ print(substring)  # 输出: World
 
 # 也可以不指定开始或结束索引，从开头或到末尾
 substring_start = my_string[:5]  # 从开头到索引5结束（不包括5）
-substring_end = my_string[7:]    # 从索引7开始（包括7）到末尾
+substring_end = my_string[7:]  # 从索引7开始（包括7）到末尾
 print(substring_start)  # 输出: Hello
-print(substring_end)    # 输出: World!
+print(substring_end)  # 输出: World!
 
 # 使用负数索引从字符串末尾开始计数
-last_three_chars = my_string[-3:]  # 获取最后三个字符 
+last_three_chars = my_string[-3:]  # 获取最后三个字符
 print(last_three_chars)  # 输出: ld!
 
 # 使用步长
@@ -53,7 +53,7 @@ every_second_char = my_string[::2]  # 从开头到末尾，每隔一个字符取
 print(every_second_char)  # 输出: Hlo o!
 
 # 反向获取字符串  使用步长来实现的
-reverse_string = my_string[::-2] 
+reverse_string = my_string[::-2]
 print(reverse_string)  # 输出: !dlroW ,olleH
 
 # 字符串分割
@@ -75,7 +75,7 @@ print(message)
 # 字符串比较
 str1 = "hello"
 str2 = "world"
-result = (str1 == str2)
+result = str1 == str2
 print(result)
 
 # 字符串是否包含子串

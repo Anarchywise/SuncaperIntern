@@ -20,10 +20,9 @@ class Solution:
 
         return False
 
+
 # 示例
 nums = [2, 3, 1, 1, 4]
 solution = Solution()
 result = solution.canJump(nums)
 print(result)
-
-       

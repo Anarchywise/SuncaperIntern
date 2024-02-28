@@ -1,0 +1,37 @@
+=== 使用 apt 命令行工具 ===
+
+1. 更新软件包列表：
+   sudo apt update
+
+2. 安装应用程序：
+   sudo apt install <package-name>
+   例如，要安装 Firefox 浏览器，可以使用：
+   sudo apt install firefox
+
+3. 更新已安装的软件包：
+   sudo apt upgrade
+
+4. 删除应用程序：
+   sudo apt remove <package-name>
+   或者，如果要彻底删除包括配置文件在内的应用程序，可以使用：
+   sudo apt purge <package-name>
+
+
+=== 使用 Ubuntu 软件中心 ===
+
+1. 打开 Ubuntu 软件中心，你可以在应用程序菜单中找到它。
+
+2. 在软件中心中，你可以通过搜索框查找应用程序。
+
+3. 找到要安装的应用程序后，点击它的图标，然后选择安装按钮。
+
+4. 软件中心会处理下载和安装过程，完成后你可以在应用程序菜单中找到新安装的应用。
+
+
+=== 使用 .deb 文件手动安装 ===
+
+有时，你可能会下载一个以 .deb 结尾的安装包，可以通过以下步骤手动安装：
+sudo dpkg -i <package-name>.deb
+sudo apt install -f   # 修复可能缺失的依赖关系
+
+请注意，手动安装可能导致依赖关系问题，建议在可能的情况下使用 apt 进行软件管理，以确保系统的稳定性和一致性。

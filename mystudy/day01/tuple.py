@@ -46,6 +46,6 @@ print(f"a: {a}, b: {b}, c: {c}, d: {d}, e: {e}")
 
 # 使用 zip 合并多个元组
 tuple1 = (1, 2, 3)
-tuple2 = ('a', 'b', 'c')
+tuple2 = ("a", "b", "c")
 combined_tuple = tuple(zip(tuple1, tuple2))
 print(combined_tuple)

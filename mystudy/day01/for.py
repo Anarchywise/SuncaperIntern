@@ -21,12 +21,12 @@ while index < len(my_list):
 
 # 使用 zip 遍历多个列表
 list1 = [1, 2, 3]
-list2 = ['a', 'b', 'c']
+list2 = ["a", "b", "c"]
 for item1, item2 in zip(list1, list2):
     print(f"List1: {item1}, List2: {item2}")
 
 # 遍历字典的键和值
-my_dict = {'a': 1, 'b': 2, 'c': 3}
+my_dict = {"a": 1, "b": 2, "c": 3}
 for key, value in my_dict.items():
     print(f"Key: {key}, Value: {value}")
 
